@@ -5,6 +5,7 @@ syntax = "proto3";
 option java_multiple_files = true;
 option java_package = "club.somc.protos";
 //option java_outer_classname = "AddressBookProtos";
+option go_package = "github.com/SocialMinecraft/protos";
 
 message DiscordMessageSent {
   string guild_id = 1;
