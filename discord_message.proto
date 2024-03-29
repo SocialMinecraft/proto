@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+//SRC_DIR=~/projects/SoMC/proto
+//protoc -I=$SRC_DIR --java_out=. $SRC_DIR/*.proto
+option java_multiple_files = true;
+option java_package = "club.somc.protos";
+//option java_outer_classname = "AddressBookProtos";
+
+message DiscordMessageSent {
+  string guild_id = 1;
+  string member_id = 2;
+  string username = 3;
+  string channel_id = 4;
+  string message = 5;
+}
