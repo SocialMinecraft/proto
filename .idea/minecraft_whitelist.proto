@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos";
+
+enum MinecraftWhitelistState{
+  WHITELISTED = 0;
+  NOT_WHITELISTED = 1;
+}
+
+message MinecraftAccountWhitelistStateUpdated {
+  string uuid = 1;
+  MinecraftWhitelistState state = 2;
+}
+
+message WhitelistMinecraftAccount {
+  string uuid = 1;
+}
+
+message UnwhitelistMinecraftAccount {
+  string uuid = 1;
+}
