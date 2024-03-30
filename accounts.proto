@@ -9,11 +9,13 @@ message MinecraftAccount {
   string minecraft_uuid = 1;
   string minecraft_username = 2;
   bool is_main = 3;
+  string first_name = 4;
 }
 
 message AddMinecraftAccountRequest {
   string user_id = 1;
-  string minecraft_username = 2;
+  string first_name = 2;
+  string minecraft_username = 3;
 }
 
 message RemoveMinecraftAccountRequest {
