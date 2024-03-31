@@ -1,11 +1,11 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "club.somc.protos";
-option go_package = "github.com/SocialMinecraft/protos";
+option java_package = "club.somc.protos.kofi";
+option go_package = "github.com/SocialMinecraft/protos/kofi";
 
 
-message KofiPayment {
+message Payment {
   string kofi_message_id = 1;
   string kofi_timestamp = 2;
   string kofi_transaction_id = 3;

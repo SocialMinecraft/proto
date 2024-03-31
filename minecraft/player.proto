@@ -1,25 +1,22 @@
 syntax = "proto3";
 
-//SRC_DIR=~/projects/SoMC/proto
-//protoc -I=$SRC_DIR --java_out=. $SRC_DIR/*.proto
 option java_multiple_files = true;
-option java_package = "club.somc.protos";
-//option java_outer_classname = "AddressBookProtos";
-option go_package = "github.com/SocialMinecraft/protos";
+option java_package = "club.somc.protos.minecraft";
+option go_package = "github.com/SocialMinecraft/protos/minecraft";
 
-message MinecraftPlayerJoined {
+message PlayerJoined {
   string server_name = 1;
   string player_uuid = 2;
   string player_name = 3;
 }
 
-message MinecraftPlayerQuit {
+message PlayerQuit {
   string server_name = 1;
   string player_uuid = 2;
   string player_name = 3;
 }
 
-message MinecraftPlayerDied {
+message PlayerDied {
   string server_name = 1;
   string player_uuid = 2;
   string player_name = 3;

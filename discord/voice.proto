@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.discord";
+option go_package = "github.com/SocialMinecraft/protos/discord";
+
+message VoiceEntered {
+  string guild_id = 1;
+  string member_id = 2;
+  string username = 3;
+  string channel_id = 4;
+}
+
+message VoiceLeft {
+  string guild_id = 1;
+  string member_id = 2;
+  string username = 3;
+}
