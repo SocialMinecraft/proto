@@ -1,0 +1,14 @@
+syntax = "proto3";
+package somc.protos.vip;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.vip";
+option go_package = "github.com/SocialMinecraft/protos/vip";
+
+message Membership {
+  int64 id = 1;
+  string email = 2;
+  int64 start = 3;
+  int64 expire = 4;
+  optional string user_id = 5;
+}

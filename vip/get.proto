@@ -1,0 +1,17 @@
+syntax = "proto3";
+import "vip/membership.proto";
+package somc.protos.vip;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.vip";
+option go_package = "github.com/SocialMinecraft/protos/vip";
+
+message GetRequest {
+  optional string user_id = 1;
+  optional string minecraft_uuid = 2;
+}
+
+message GetResponse {
+  bool hasMembership = 1;
+  optional Membership membership = 2;
+}
