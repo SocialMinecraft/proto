@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos";
+option go_package = "github.com/SocialMinecraft/protos";
+
+
+message KofiPayment {
+  string kofi_message_id = 1;
+  string kofi_timestamp = 2;
+  string kofi_transaction_id = 3;
+
+  string amonut = 4;
+  string currency = 5;
+  string email = 6;
+  string type = 7;
+  string from = 8;
+
+  bool is_subscription_payment = 9;
+  bool is_first_subscription_payment = 10;
+
+  optional string tier_name = 11;
+}
