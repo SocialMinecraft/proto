@@ -10,7 +10,7 @@ message KofiPayment {
   string kofi_timestamp = 2;
   string kofi_transaction_id = 3;
 
-  string amonut = 4;
+  string amount = 4;
   string currency = 5;
   string email = 6;
   string type = 7;
