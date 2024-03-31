@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.vip";
+option go_package = "github.com/SocialMinecraft/protos/vip";
+
+message SyncRequest {
+  string user_id = 1;
+}
+
+message SyncResponse {
+  bool success = 1;
+  optional string error_message = 2;
+}
