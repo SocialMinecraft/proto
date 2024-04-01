@@ -1,5 +1,5 @@
 syntax = "proto3";
-import "vip/membership.proto";
+import "membership.proto";
 package somc.protos.vip;
 
 option java_multiple_files = true;
