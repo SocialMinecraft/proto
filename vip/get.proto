@@ -12,6 +12,6 @@ message GetRequest {
 }
 
 message GetResponse {
-  bool hasMembership = 1;
+  bool has_membership = 1;
   optional Membership membership = 2;
 }
