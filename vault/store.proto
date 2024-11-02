@@ -1,0 +1,21 @@
+syntax = "proto3";
+package somc.protos.minecraft;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.vault";
+option go_package = "github.com/SocialMinecraft/protos/vault";
+
+import 'vault/vault_item.proto';
+
+message StoreVaultItem {
+  string uuid = 1;
+  int32 slot = 2;
+  VaultItem item = 3;
+
+  int64 stamp = 4; // is this needed?
+}
+
+message StoreVaultItemResponse {
+  bool success = 1;
+  optional string error = 2;
+}

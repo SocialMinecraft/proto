@@ -1,0 +1,18 @@
+syntax = "proto3";
+package somc.protos.minecraft;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.vault";
+option go_package = "github.com/SocialMinecraft/protos/vault";
+
+message VaultItem {
+  string type = 1;
+  int32 amount = 2;
+  double durability = 3;
+
+  optional string display_name = 4;
+  optional string lore = 5;
+  optional int32 custom_model_data = 6;
+  repeated string enchants = 7;
+  repeated string flags = 8;
+}
