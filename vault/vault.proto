@@ -9,7 +9,7 @@ import 'vault/vault_item.proto';
 
 message VaultSlot {
   int32 slot = 1;
-  bool locked = 2;
+  bool is_locked = 2;
   int32 cooldown_seconds = 3;
   optional VaultItem item = 4;
 }

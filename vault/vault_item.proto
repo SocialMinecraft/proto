@@ -11,8 +11,13 @@ message VaultItem {
   double durability = 3;
 
   optional string display_name = 4;
-  optional string lore = 5;
-  optional int32 custom_model_data = 6;
-  repeated string enchants = 7;
+  optional int32 custom_model_data = 5;
+  repeated string lore = 6;
+  repeated VaultItemEnchantment enchants = 7;
   repeated string flags = 8;
+}
+
+message VaultItemEnchantment {
+  string name = 1;
+  int32 level = 2;
 }

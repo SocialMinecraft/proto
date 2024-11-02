@@ -11,8 +11,6 @@ message StoreVaultItem {
   string uuid = 1;
   int32 slot = 2;
   VaultItem item = 3;
-
-  int64 stamp = 4; // is this needed?
 }
 
 message StoreVaultItemResponse {
