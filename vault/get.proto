@@ -1,0 +1,16 @@
+syntax = "proto3";
+package somc.protos.minecraft;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.vault";
+option go_package = "github.com/SocialMinecraft/protos/vault";
+
+import 'vault/vault.proto';
+
+message GetVault {
+  string uuid = 1;
+}
+
+message GetVaultResponse {
+  Vault vault = 1;
+}
