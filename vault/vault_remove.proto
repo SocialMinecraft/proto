@@ -5,8 +5,6 @@ option java_multiple_files = true;
 option java_package = "club.somc.protos.vault";
 option go_package = "github.com/SocialMinecraft/protos/vault";
 
-import 'vault/vault_item.proto';
-
 message RemoveVaultItem {
   string uuid = 1;
   int32 slot = 2;
