@@ -8,7 +8,7 @@ option go_package = "github.com/SocialMinecraft/protos/vault";
 message VaultItem {
   string type = 1;
   int32 amount = 2;
-  double durability = 3;
+  int32 durability = 3;
 
   optional string display_name = 4;
   optional int32 custom_model_data = 5;
