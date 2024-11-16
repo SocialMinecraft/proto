@@ -1,0 +1,13 @@
+syntax = "proto3";
+package somc.protos.account;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.account";
+option go_package = "github.com/SocialMinecraft/protos/account";
+
+message Account {
+  string id = 1;
+  optional string first_name = 2;
+  optional int32 birthday = 3;
+  optional string discord_id = 4;
+}

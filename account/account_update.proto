@@ -1,0 +1,24 @@
+syntax = "proto3";
+package somc.protos.account;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.account";
+option go_package = "github.com/SocialMinecraft/protos/account";
+
+import 'account/account.proto';
+
+// accounts.update
+message UpdateAccount {
+  Account account = 1;
+}
+
+message UpdateAccountResponse {
+  bool success = 1;
+  optional string error = 2;
+  optional Account account = 3;
+}
+
+// accounts.updated
+message AccountUpdated {
+  Account account = 1;
+}

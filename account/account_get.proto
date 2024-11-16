@@ -1,0 +1,19 @@
+syntax = "proto3";
+package somc.protos.account;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.account";
+option go_package = "github.com/SocialMinecraft/protos/account";
+
+import 'account/account.proto';
+
+// accounts.get
+message GetAccount {
+  optional string account_id = 1;
+  optional string discord_id = 2;
+  optional string minecraft_id = 3;
+}
+
+message GetAccountResponse {
+  optional Account account = 1;
+}
