@@ -9,7 +9,11 @@ import "minecraft_account/minecraft_account.proto";
 
 // accounts.minecraft.add
 message AddMinecraftAccountRequest {
-  string user_id = 1;
+  optional string deprecated_discord_id = 1 [deprecated=true];
+
   string first_name = 2;
   string minecraft_username = 3;
+
+  optional string minecraft_uuid = 4;
+  optional string user_id = 5; /* soon to be requried */
 }

@@ -7,7 +7,7 @@ option go_package = "github.com/SocialMinecraft/protos/minecraftaccounts";
 
 import "minecraft_account/minecraft_account.proto";
 
-// ... not in use.
+// this is only a response
 message ChangeMinecraftAccountResponse {
   bool success = 1;
   optional MinecraftAccount account = 2;
@@ -22,7 +22,8 @@ enum MinecraftAccountChangeType {
 
 // accounts.minecraft.changed
 message MinecraftAccountChanged {
-  string user_id = 1;
+  optional string deprecated_discord_id = 1 [deprecated=true];
   MinecraftAccountChangeType change = 2;
   MinecraftAccount account = 3;
+  optional string user_id = 4;
 }
