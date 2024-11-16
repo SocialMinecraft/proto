@@ -10,5 +10,6 @@ import "minecraft_account/minecraft_account.proto";
 // accounts.minecraft.remove
 message RemoveMinecraftAccountRequest {
   string user_id = 1;
-  string minecraft_username = 2;
+  optional string deprecated_minecraft_username = 2 [deprecated = true];
+  optional string minecraft_uuid = 3;
 }
