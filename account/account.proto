@@ -8,6 +8,6 @@ option go_package = "github.com/SocialMinecraft/protos/account";
 message Account {
   string id = 1;
   optional string first_name = 2;
-  optional int32 birthday = 3;
+  optional int64 birthday = 3;
   optional string discord_id = 4;
 }
