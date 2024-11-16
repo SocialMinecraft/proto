@@ -1,0 +1,18 @@
+syntax = "proto3";
+package somc.protos.stats;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.stats";
+option go_package = "github.com/SocialMinecraft/protos/stats";
+
+message Stats {
+  string minecraft_uuid = 1;
+  string server = 2;
+
+  optional int32 playtime = 3;
+  optional int32 blocks_placed = 4;
+  optional int32 blocks_broken = 5;
+  optional int32 deaths = 6;
+
+  optional int64 last_updated = 7;
+}

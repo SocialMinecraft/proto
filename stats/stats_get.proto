@@ -1,0 +1,16 @@
+syntax = "proto3";
+package somc.protos.stats;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.stats";
+option go_package = "github.com/SocialMinecraft/protos/stats";
+
+import 'stats/stats.proto';
+
+message GetStats {
+  string minecraft_id = 1;
+}
+
+message GetStatsResponse {
+  repeated Stats stats = 1;
+}
