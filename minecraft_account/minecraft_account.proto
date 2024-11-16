@@ -10,5 +10,6 @@ message MinecraftAccount {
   string minecraft_uuid = 1;
   string minecraft_username = 2;
   bool is_main = 3;
-  string first_name = 4;
+
+  string deprecated_first_name = 4 [deprecated=true]; /* when out of use change to reserved 4; */
 }
