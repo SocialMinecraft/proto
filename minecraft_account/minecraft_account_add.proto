@@ -1,0 +1,15 @@
+syntax = "proto3";
+package somc.protos.minecraftaccounts;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.minecraftaccounts";
+option go_package = "github.com/SocialMinecraft/protos/minecraftaccounts";
+
+import "minecraft_account/minecraft_account.proto";
+
+// accounts.minecraft.add
+message AddMinecraftAccountRequest {
+  string user_id = 1;
+  string first_name = 2;
+  string minecraft_username = 3;
+}

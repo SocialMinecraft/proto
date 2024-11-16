@@ -1,0 +1,28 @@
+syntax = "proto3";
+package somc.protos.minecraftaccounts;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.minecraftaccounts";
+option go_package = "github.com/SocialMinecraft/protos/minecraftaccounts";
+
+import "minecraft_account/minecraft_account.proto";
+
+// ... not in use.
+message ChangeMinecraftAccountResponse {
+  bool success = 1;
+  optional MinecraftAccount account = 2;
+  optional  string error_message = 3;
+}
+
+enum MinecraftAccountChangeType {
+  ADDED = 0;
+  REMOVED = 1;
+  UPDATED = 2;
+}
+
+// accounts.minecraft.changed
+message MinecraftAccountChanged {
+  string user_id = 1;
+  MinecraftAccountChangeType change = 2;
+  MinecraftAccount account = 3;
+}

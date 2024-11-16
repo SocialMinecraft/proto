@@ -1,0 +1,18 @@
+syntax = "proto3";
+package somc.protos.minecraftaccounts;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.minecraftaccounts";
+option go_package = "github.com/SocialMinecraft/protos/minecraftaccounts";
+
+import "minecraft_account/minecraft_account.proto";
+
+// accounts.minecraft.list
+message ListMinecraftAccountsRequest {
+  string user_id = 1;
+}
+
+message ListMinecraftAccountsResponse {
+  string user_id = 1;
+  repeated  MinecraftAccount accounts = 2;
+}
