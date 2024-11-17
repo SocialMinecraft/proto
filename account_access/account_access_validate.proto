@@ -1,0 +1,14 @@
+syntax = "proto3";
+package somc.protos.accountaccess;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.accountaccess";
+option go_package = "github.com/SocialMinecraft/protos/accountaccess";
+
+message ValidateAccountAccessToken {
+  string token = 1;
+}
+
+message ValidateAccountAccessTokenResponse {
+  optional string account_id = 1;
+}
