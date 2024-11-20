@@ -7,6 +7,7 @@ option go_package = "github.com/SocialMinecraft/protos/stats";
 
 import 'stats/stats.proto';
 
+// stats.get
 message GetStats {
   repeated string minecraft_ids = 1;
 }
