@@ -1,0 +1,20 @@
+syntax = "proto3";
+package somc.protos.minecraftaccounts;
+
+option java_multiple_files = true;
+option java_package = "club.somc.protos.minecraftaccounts";
+option go_package = "github.com/SocialMinecraft/protos/minecraftaccounts";
+
+import "minecraft_account/minecraft_account.proto";
+
+// accounts.minecraft.get
+message GetMinecraftAccountRequest {
+  string minecraft_uuid = 1;
+}
+
+message GetMinecraftAccountResponse {
+  bool account_found = 1;
+  reserved 2;
+  //optional string user_id = 2;
+  optional  MinecraftAccount account = 3;
+}
